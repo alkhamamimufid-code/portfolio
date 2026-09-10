@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+:root {
+  /* Editorial neo-brutalist — warm monochrome neutrals. Canvas/greige are the
+     primary light surfaces; charcoal is reserved for dark "chapter" sections
+     (see .section--dark); stark black is text/emphasis only. */
+  --canvas: #f2f0ea;
+  --greige: #e3e0d8;
+  --charcoal: #2a2a2a;
+  --stark-black: #111111;
+
+  --black: var(--charcoal);
+  --white: var(--canvas);
+  --grey-6: var(--greige);
+  --grey-5: #d6d2c6;
+  --grey-4: #c3bdae;
+  --grey-3: #6f6a60;
+  --ink: var(--stark-black);
+
+  --accent: var(--charcoal);
+  --accent-hover: #3d3d3d;
+  /* Text on a filled/accent surface — stays canvas-light regardless of the
+     light/dark tokens a section happens to be scoped to. */
+  --on-accent: var(--canvas);
+
+  --display: "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-glass: cubic-bezier(0.25, 1, 0.5, 1);
+
+  /* Derived from --ink (the local text color) rather than a fixed white/black,
+     so glass automatically reads correctly on both light sections and the
+     charcoal .section--dark chapters: near-black ink -> frosted-dark glass on
+     light backgrounds, near-white ink -> frosted-white glass on dark ones. */
+  --glass-bg: color-mix(in srgb, var(--ink) 6%, transparent);
+  --glass-bg-strong: color-mix(in srgb, var(--ink) 11%, transparent);
+  --glass-border: color-mix(in srgb, var(--ink) 55%, transparent);
+
+  color-scheme: light;
+  color: var(--ink);
+  background: var(--white);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--sans);
+  background: var(--white);
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--charcoal);
+  color: var(--canvas);
+}
