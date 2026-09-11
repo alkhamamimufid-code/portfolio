@@ -289,7 +289,6 @@ export const testimonials: Testimonial[] = [
   { quote: "This saved us so much manual work. Thank you!" },
   { quote: "You turned a month of work into a few seconds." },
   { quote: "This is exactly what we needed. Great work!" },
-  { quote: "The automation is brilliant. It makes the whole process so much easier." },
   { quote: "Thank you! I honestly didn't expect the dashboard to turn out this well." },
   { quote: "This completely changed the way we look at the data." },
   { quote: "This used to take hours. Now it takes minutes." },
