@@ -55,7 +55,7 @@ export function Certificates() {
   }, []);
 
   return (
-    <section className="section section--wash" id="certificates">
+    <section className="section section--mint" id="certificates">
       <div className="container">
         <Reveal>
           <div className="section__head">

@@ -12,13 +12,6 @@ export const person = {
     "Business Intelligence developer and System Analyst specializing in enterprise Power BI delivery, semantic model performance, reporting automation, and financial data reconciliation. I'm the sole Power BI specialist within a Microsoft Power Platform team at ADNOC, owning 50+ dashboards for eight departments on a Microsoft Fabric lakehouse alongside SQL, SharePoint, Web API, and Excel sources. I build the capability the platform doesn't ship with — automated report distribution, multi-million-row extracts — and engineer models that hold at scale, including a reconciliation solution that replaced a month-long manual cycle and a 30M-row model tuned from four minutes to eight seconds.",
 };
 
-export const stats = [
-  { value: "50+", label: "Power BI dashboards shipped" },
-  { value: "30x", label: "faster reporting — 4 min to 8 sec" },
-  { value: "15M", label: "rows unlocked past the export limit" },
-  { value: "54", label: "certificates & honors" },
-];
-
 export interface FeaturedSkill {
   name: string;
   icon: string;

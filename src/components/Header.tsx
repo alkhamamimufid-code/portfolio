@@ -4,6 +4,7 @@ import { MobileMenu } from "./MobileMenu";
 
 const links = [
   { href: "#about", label: "About" },
+  { href: "#case-studies", label: "Case studies" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
   { href: "#certificates", label: "Certificates" },

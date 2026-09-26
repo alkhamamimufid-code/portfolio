@@ -20,7 +20,12 @@ export function Hero() {
       <span className="hero__accent-block hero__accent-block--b" aria-hidden="true" />
 
       <div className="hero container">
-        <span className="hero__eyebrow hero__enter">{person.role}</span>
+        <span className="hero__eyebrow hero__enter">
+          {person.role.split(" · ")[0]}
+          <span className="hero__eyebrow-more">
+            {person.role.slice(person.role.indexOf(" · "))}
+          </span>
+        </span>
 
         <div className="hero__stage hero__enter">
           <h1 className="hero__name">
@@ -31,8 +36,12 @@ export function Hero() {
           <div className="hero__portrait-frame">
             <img
               className="hero__portrait"
-              src="/hero-portrait-cutout.png"
+              src="/hero-portrait-cutout.webp"
               alt="Portrait of Mufid Alkhamami"
+              width="464"
+              height="1262"
+              fetchPriority="high"
+              decoding="async"
             />
           </div>
         </div>
@@ -56,6 +65,9 @@ export function Hero() {
         </div>
 
         <p className="hero__tagline hero__enter">{person.tagline}</p>
+        <p className="hero__proof hero__enter">
+          System Analyst at ADNOC · 50+ dashboards · 8 departments · 30M+ row models
+        </p>
 
         <div className="hero__actions hero__enter">
           <LiquidGlassButton href="#contact">Get in touch</LiquidGlassButton>

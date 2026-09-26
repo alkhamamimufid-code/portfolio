@@ -3,7 +3,7 @@ import { Reveal } from "./Reveal";
 
 export function Education() {
   return (
-    <section className="section section--grey" id="education">
+    <section className="section section--pearl" id="education">
       <div className="container">
         <Reveal>
           <div className="section__head">
@@ -16,9 +16,13 @@ export function Education() {
           <Reveal className="education-photo-wrap">
             <div className="education-photo">
               <img
-                src="/graduation-cutout.png"
+                src="/graduation-cutout.webp"
                 alt="Mufid Alkhamami at graduation"
                 className="education-photo__img"
+                width="1000"
+                height="1176"
+                loading="lazy"
+                decoding="async"
               />
               <div className="education-photo__shadow" />
             </div>

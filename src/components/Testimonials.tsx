@@ -4,7 +4,7 @@ import { onSpotlightMove } from "../hooks/useSpotlight";
 
 export function Testimonials() {
   return (
-    <section className="section section--dark">
+    <section className="section section--dark" id="testimonials">
       <div className="container">
         <Reveal>
           <div className="section__head">

@@ -1,24 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500&display=swap");
 
 :root {
   /* Editorial neo-brutalist — warm monochrome neutrals. Canvas/greige are the
      primary light surfaces; charcoal is reserved for dark "chapter" sections
      (see .section--dark); stark black is text/emphasis only. */
-  --canvas: #f2f0ea;
-  --greige: #e3e0d8;
-  --charcoal: #2a2a2a;
-  --stark-black: #111111;
+  --canvas: #eaf1f4;
+  --greige: #d5e2e8;
+  --charcoal: #0b1f2e;
+  --stark-black: #06121b;
 
   --black: var(--charcoal);
   --white: var(--canvas);
   --grey-6: var(--greige);
-  --grey-5: #d6d2c6;
-  --grey-4: #c3bdae;
-  --grey-3: #6f6a60;
+  --grey-5: #c5d5dd;
+  --grey-4: #a9bec9;
+  --grey-3: #566f7d;
   --ink: var(--stark-black);
 
   --accent: var(--charcoal);
-  --accent-hover: #3d3d3d;
+  --accent-hover: #16303f;
   /* Text on a filled/accent surface — stays canvas-light regardless of the
      light/dark tokens a section happens to be scoped to. */
   --on-accent: var(--canvas);

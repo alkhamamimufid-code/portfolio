@@ -1,4 +1,6 @@
 import { languages, person } from "../content/profile";
+import { pillars, positioning } from "../content/story";
+import { Icon } from "./Icons";
 import { Reveal } from "./Reveal";
 import { onSpotlightMove } from "../hooks/useSpotlight";
 
@@ -14,7 +16,26 @@ export function About() {
         </Reveal>
         <Reveal delay={100}>
           <div className="about">
-            <p className="about__text">{person.objective}</p>
+            <div className="about__main">
+              <p className="about__statement">{positioning}</p>
+              <ul className="pillars">
+                {pillars.map((p) => (
+                  <li className="pillar" key={p.title}>
+                    <span className="pillar__icon">
+                      <Icon name={p.icon} />
+                    </span>
+                    <div>
+                      <h3>{p.title}</h3>
+                      <p>{p.text}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+              <details className="about__more">
+                <summary>Full professional summary</summary>
+                <p className="about__text">{person.objective}</p>
+              </details>
+            </div>
             <div className="about__languages spotlight" onPointerMove={onSpotlightMove}>
               <h3>Languages</h3>
               {languages.map((lang) => (

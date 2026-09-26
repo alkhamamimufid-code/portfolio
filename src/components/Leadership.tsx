@@ -4,7 +4,7 @@ import { onSpotlightMove } from "../hooks/useSpotlight";
 
 export function Leadership() {
   return (
-    <section className="section section--wash" id="leadership">
+    <section className="section section--depth" id="leadership">
       <div className="container">
         <Reveal>
           <div className="section__head">

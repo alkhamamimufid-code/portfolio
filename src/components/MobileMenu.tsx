@@ -5,6 +5,7 @@ import { LinkedInIcon, MailIcon, PhoneIcon, WhatsAppIcon } from "./ContactIcons"
 
 const navItems = [
   { label: "About", href: "#about" },
+  { label: "Case studies", href: "#case-studies" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Certificates", href: "#certificates" },
