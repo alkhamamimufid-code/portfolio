@@ -711,7 +711,6 @@
   height: 100%;
   object-fit: contain;
   display: block;
-  filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.2));
 }
 
 .hero__float-badge {
