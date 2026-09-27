@@ -1874,6 +1874,8 @@
 .close-cta__line-wrap {
   display: block;
   overflow: hidden;
+  padding-bottom: 0.14em;
+  margin-bottom: -0.14em;
 }
 
 .close-cta__line {
