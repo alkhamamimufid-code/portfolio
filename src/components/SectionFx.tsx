@@ -10,10 +10,9 @@ const VARIANTS: Record<string, string> = {
   experience: "diagonal",
   "case-studies": "zoom-in",
   education: "fade",
-  projects: "flip-up",
-  certificates: "diamond",
+  certificates: "rise",
   skills: "open-v",
-  leadership: "rise",
+  leadership: "diamond",
   testimonials: "zoom-out",
   contact: "from-bottom",
 };

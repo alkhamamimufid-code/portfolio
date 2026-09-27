@@ -1,6 +1,5 @@
 import { CountUp } from "./CountUp";
 import { EfficiencyPanel, ReconciliationPanel, SpeedPanel } from "./ImpactVisuals";
-import { RowsMotion, SatisfactionMotion } from "./MetricMotions";
 import { Reveal } from "./Reveal";
 import { dataSources, departments } from "../content/story";
 
@@ -47,13 +46,6 @@ export function ByTheNumbers() {
               <span className="chain__label">Data sources</span>
               <span className="chain__reveal">{dataSources.join(" · ")}</span>
             </div>
-          </div>
-        </Reveal>
-
-        <Reveal delay={100}>
-          <div className="tiles tiles--pair">
-            <RowsMotion />
-            <SatisfactionMotion />
           </div>
         </Reveal>
 

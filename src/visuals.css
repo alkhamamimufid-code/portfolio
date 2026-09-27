@@ -349,9 +349,36 @@
   background: var(--pos);
 }
 
-.tile--motion.is-in .rows-gauge__fill {
+.tile--motion.is-in .rows-gauge__fill,
+.ba--rows.is-in .rows-gauge__fill {
   width: 100%;
   transition: width 1.4s var(--ease-out) 0.2s;
+}
+
+.ba--rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.ba__rows-value {
+  font-family: var(--display);
+  font-size: clamp(30px, 3.4vw, 40px);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--pos);
+  margin-bottom: 14px;
+}
+
+.ba--rows .rows-gauge {
+  margin-top: auto;
+  margin-bottom: 24px;
+}
+
+.ba--rows .ba__delta {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: var(--grey-3);
 }
 
 .rows-gauge__cap {
@@ -1711,150 +1738,6 @@ main > .hero-stack ~ section {
 
 [data-fx="from-bottom"]:not([data-fx-done]) {
   clip-path: inset(calc((1 - var(--t)) * 100%) 0 0 0);
-}
-
-/* ---------- projects: full-screen chapters with scroll-driven handover ---------- */
-
-.pj {
-  --pj-accent: #2dd4bf;
-  padding-bottom: 0;
-  background: radial-gradient(ellipse 70% 55% at 50% 42%, color-mix(in srgb, var(--pj-accent) 16%, transparent), transparent 70%),
-    var(--charcoal);
-  transition: background 600ms var(--ease-out);
-}
-
-.pj__track {
-  height: calc(var(--n) * 72svh + 100svh);
-}
-
-.pj__stage {
-  position: sticky;
-  top: 0;
-  height: 100svh;
-  overflow: hidden;
-}
-
-.pj__slide {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 18px;
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 90px clamp(24px, 6vw, 72px) 60px;
-  will-change: transform, opacity, filter;
-}
-
-.pj__meta {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  font-family: var(--mono);
-  font-size: 13px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--grey-3);
-}
-
-.pj__count {
-  color: var(--c);
-}
-
-.pj__title {
-  margin: 0;
-  max-width: 16ch;
-  font-family: "Playfair Display", var(--display);
-  font-weight: 400;
-  font-size: clamp(38px, 7vw, 92px);
-  line-height: 1.02;
-  letter-spacing: -0.02em;
-  color: var(--ink);
-  text-shadow: 1px 2px 0.1em rgba(0, 0, 0, 0.5);
-}
-
-.pj__impact {
-  align-self: flex-start;
-  padding: 7px 16px;
-  border: 1px solid var(--c);
-  border-radius: 980px;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--c);
-  background: color-mix(in srgb, var(--c) 12%, transparent);
-}
-
-.pj__desc {
-  margin: 0;
-  max-width: 54ch;
-  font-size: clamp(16px, 1.6vw, 20px);
-  line-height: 1.6;
-  color: var(--grey-3);
-}
-
-.pj__dots {
-  position: absolute;
-  right: clamp(12px, 2.5vw, 32px);
-  top: 50%;
-  z-index: 5;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  transform: translateY(-50%);
-}
-
-.pj__dot {
-  position: relative;
-  width: 22px;
-  height: 22px;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-}
-
-.pj__dot::before {
-  content: "";
-  position: absolute;
-  inset: 6px;
-  border: 1px solid var(--ink);
-  border-radius: 50%;
-  transition: background 250ms var(--ease-out), transform 250ms var(--ease-out),
-    border-color 250ms var(--ease-out);
-}
-
-.pj__dot:hover::before {
-  transform: scale(1.25);
-}
-
-.pj__dot.is-active::before {
-  background: var(--pj-accent);
-  border-color: var(--pj-accent);
-  transform: scale(1.35);
-}
-
-@media (max-width: 700px) {
-  .pj__slide {
-    padding-right: 48px;
-  }
-}
-
-/* Reduced motion: no pinned sequence, just a readable list. */
-.pj--flat .pj__track {
-  height: auto;
-}
-
-.pj--flat .pj__stage {
-  position: static;
-  height: auto;
-  overflow: visible;
-}
-
-.pj--flat .pj__slide {
-  position: static;
-  padding-block: 48px;
-  border-top: 1px solid var(--grey-5);
 }
 
 /* ---------- skills: grouped cards, all visible, no sideways scrolling ---------- */

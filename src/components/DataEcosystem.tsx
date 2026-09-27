@@ -4,7 +4,7 @@ import { Reveal } from "./Reveal";
 import { flows } from "../content/story";
 
 export function DataEcosystem() {
-  const [active, setActive] = useState<Record<string, number>>({ reporting: 3, automation: 1 });
+  const [active, setActive] = useState<Record<string, number>>({ reporting: 0, automation: 0 });
 
   return (
     <section

@@ -2,6 +2,7 @@ import { ClockCount, CountUp } from "./CountUp";
 import { Icon } from "./Icons";
 import type { CSSProperties, ReactNode } from "react";
 import { useReveal } from "../hooks/useReveal";
+import { rowsMetric } from "../content/story";
 
 interface BarRowProps {
   tag: string;
@@ -48,20 +49,25 @@ export function SpeedPanel() {
 
 export function EfficiencyPanel() {
   const { ref, visible } = useReveal<HTMLDivElement>();
+  const capPct = Math.max(1, (rowsMetric.cap / rowsMetric.delivered) * 100);
   return (
-    <article ref={ref} className={`ba glass-dark${visible ? " is-in" : ""}`}>
+    <article ref={ref} className={`ba ba--rows glass-dark${visible ? " is-in" : ""}`}>
       <header className="ba__head">
-        <Icon name="clock" className="ba__icon" />
-        <h3>Visa &amp; license processing time</h3>
+        <Icon name={rowsMetric.icon} className="ba__icon" />
+        <h3>{rowsMetric.label}</h3>
       </header>
-      <BarRow tag="Before" width={100} tone="before" value="100%" />
-      <BarRow tag="After" width={22} tone="after" value="22%" />
-      <p className="ba__delta">
-        <strong>
-          <CountUp value={78} suffix="%" />
-        </strong>{" "}
-        of processing time saved
-      </p>
+      <span className="ba__rows-value">
+        <CountUp value={rowsMetric.value} suffix={rowsMetric.suffix} />
+      </span>
+      <div
+        className="rows-gauge"
+        role="img"
+        aria-label="15 million rows delivered versus a 150 thousand row native cap"
+      >
+        <span className="rows-gauge__fill" style={{ "--cap": `${capPct}%` } as CSSProperties} />
+        <span className="rows-gauge__cap" style={{ "--cap": `${capPct}%` } as CSSProperties} />
+      </div>
+      <p className="ba__delta">~150K native cap &rarr; {rowsMetric.value}{rowsMetric.suffix} delivered</p>
     </article>
   );
 }

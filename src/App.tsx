@@ -10,7 +10,6 @@ import { DataEcosystem } from "./components/DataEcosystem";
 import { Experience } from "./components/Experience";
 import { CaseStudies } from "./components/CaseStudies";
 import { Education } from "./components/Education";
-import { Projects } from "./components/Projects";
 import { Certificates } from "./components/Certificates";
 import { Skills } from "./components/Skills";
 import { Leadership } from "./components/Leadership";
@@ -38,7 +37,6 @@ function App() {
         <Experience />
         <CaseStudies />
         <Education />
-        <Projects />
         <Certificates />
         <Skills />
         <Leadership />
