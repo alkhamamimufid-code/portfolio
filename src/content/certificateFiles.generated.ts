@@ -290,6 +290,14 @@ export const certificateFiles: CertificateFile[] = [
     "url": "/certificates/volunteering/History.pdf"
   },
   {
+    "title": "International Scientific and Educational Forum “Trajectory of Discoveries” 2026",
+    "category": "Volunteering",
+    "categorySlug": "volunteering",
+    "fileName": "Trajectory of Discoveries 2026.jpg",
+    "type": "image",
+    "url": "/certificates/volunteering/Trajectory%20of%20Discoveries%202026.jpg"
+  },
+  {
     "title": "International Youth Forum  The Future of the Russian World",
     "category": "Volunteering",
     "categorySlug": "volunteering",
