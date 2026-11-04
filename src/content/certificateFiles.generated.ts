@@ -330,6 +330,14 @@ export const certificateFiles: CertificateFile[] = [
     "url": "/certificates/volunteering/New%20Year%20flashmob,%20photo%20contest..pdf"
   },
   {
+    "title": "Pink Caravan Donation Certificate",
+    "category": "Volunteering",
+    "categorySlug": "volunteering",
+    "fileName": "Pink Caravan Donation Certificate.pdf",
+    "type": "pdf",
+    "url": "/certificates/volunteering/Pink%20Caravan%20Donation%20Certificate.pdf"
+  },
+  {
     "title": "Rasul Gamzatov",
     "category": "Volunteering",
     "categorySlug": "volunteering",
