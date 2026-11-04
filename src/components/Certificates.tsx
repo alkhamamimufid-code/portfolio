@@ -3,6 +3,7 @@ import { certificateFiles } from "../content/certificateFiles.generated";
 import type { CertificateFile } from "../content/certificateFiles.generated";
 import { colorFor, initialsFor } from "./CategoryBadge";
 import { categoryLogos } from "../content/categoryLogos";
+import { sortNewestFirst } from "../content/certificateDates";
 import { FolderIcon } from "./FolderIcon";
 import { CertificateFolderModal } from "./CertificateFolderModal";
 import { CertificateModal } from "./CertificateModal";
@@ -31,10 +32,15 @@ export function Certificates() {
     ];
   }, []);
 
-  const certsInFolder =
-    activeFolder === ALL
-      ? certificateFiles
-      : certificateFiles.filter((c) => c.category === activeFolder);
+  const certsInFolder = useMemo(
+    () =>
+      sortNewestFirst(
+        activeFolder === ALL
+          ? certificateFiles
+          : certificateFiles.filter((c) => c.category === activeFolder)
+      ),
+    [activeFolder]
+  );
 
   const openFolder = useCallback((name: string) => {
     setActiveFolder(name);

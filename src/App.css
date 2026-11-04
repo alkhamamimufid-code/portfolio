@@ -1366,6 +1366,12 @@
   white-space: nowrap;
 }
 
+.cert-folder-row__date {
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--grey-3);
+}
+
 .cert-folder-row__chevron {
   flex-shrink: 0;
   color: var(--grey-3);

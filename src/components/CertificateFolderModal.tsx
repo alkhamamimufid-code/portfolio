@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import type { CertificateFile } from "../content/certificateFiles.generated";
 import { colorFor, initialsFor } from "./CategoryBadge";
 import { categoryLogos } from "../content/categoryLogos";
+import { certificateDate } from "../content/certificateDates";
 
 interface Props {
   category: string;
@@ -75,7 +76,9 @@ export function CertificateFolderModal({ category, certs, onClose, onOpenCert }:
         </header>
 
         <div className="cert-folder-modal__list">
-          {certs.map((cert) => (
+          {certs.map((cert) => {
+            const date = certificateDate(cert);
+            return (
             <button
               type="button"
               className="cert-folder-row"
@@ -84,10 +87,12 @@ export function CertificateFolderModal({ category, certs, onClose, onOpenCert }:
             >
               <span className="cert-folder-row__text">
                 <span className="cert-folder-row__title">{cert.title}</span>
+                {date && <span className="cert-folder-row__date">{date.label}</span>}
               </span>
               <span className="cert-folder-row__chevron">›</span>
             </button>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>
